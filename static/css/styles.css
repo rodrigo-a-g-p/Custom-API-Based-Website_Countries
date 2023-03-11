@@ -1,0 +1,144 @@
+
+/* index.html */
+
+.form-container {
+    text-align: center;
+    margin: 100px 210px;
+}
+
+.title {
+  font-family: 'Lora', serif;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+#submit-button {
+    margin-top: 10px;
+}
+
+.flags-container {
+  margin: 100px 210px;
+}
+
+
+.flags-title {
+    font-family: 'Alegreya', serif;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+.flags {
+    height: 200px;
+    width: 300px;
+    border-radius: 5%;
+}
+
+
+
+
+/* country.html */
+
+.container-country-data {
+    margin-top: 80px;
+    text-align: center;
+}
+
+#google-maps-link {
+    color:black;
+    text-decoration:none;
+}
+
+#google-maps-link:hover {
+    color:darkblue;
+}
+
+.country-flag-image {
+    height: 230px;
+    width: 340px;
+    border-radius: 5%;
+}
+
+
+.coat-of-arms-image {
+    height: 290px;
+    width: 290px;
+    margin-left: 200px;
+}
+
+/* Table */
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+
+table {
+ margin: 40px auto 40px;
+ width: 60%;
+ border-collapse: collapse;
+ border-spacing: 0;
+ box-shadow: 0 2px 15px rgba(64,64,64,.7);
+ border-radius: 12px;
+ overflow: hidden;
+}
+
+
+td , th {
+ padding: 15px 20px;
+ text-align: center;
+}
+
+th {
+    background-color: #353049;
+    color: #fafafa;
+    font-family: 'Open Sans',Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+tr {
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+
+/* error.html */
+
+.error-title {
+    color: red;
+}
+
+.error-image {
+    height: 430px;
+    width: 840px;
+    border-radius: 5%;
+    margin: 30px 0;
+}
+
+
+
+/* Footer */
+
+footer {
+  padding: 30px;
+}
+
+.social-media-icons {
+  color: black;
+  font-size: 20px;
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.copyright {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+}

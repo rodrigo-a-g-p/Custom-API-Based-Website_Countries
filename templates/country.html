@@ -1,0 +1,61 @@
+
+{% include "header.html" %}
+{% block content %}
+
+<div class="container-country-data">
+
+    <a id="google-maps-link" href="{{country['maps']['googleMaps']}}">
+        <h1 class='title'>{{country['name']['common']}}</h1>
+    </a>
+
+    <img class="country-flag-image" src="{{ country['flags']['png'] }}" alt="Flag Image">
+
+    {% if country['coatOfArms'] != {}: %}
+        <img class="coat-of-arms-image"  src="{{country['coatOfArms']['png']}}" alt="Coat of Arms image">
+    {% endif  %}
+
+
+    <table>
+        <tr>
+            <th>Official Name</th>
+            <th>Native Name</th>
+            <th>Languages</th>
+
+            <th>Flag</th>
+            <th>Capital City</th>
+            <th>Currency</th>
+
+            <th>Continent</th>
+            <th>Region</th>
+            <th>Sub Region</th>
+
+            <th>Population</th>
+        </tr>
+
+        <tr>
+            <td>{{country['name']['official']}}</td>
+            <td>{{send_variables['native_name']}}</td>
+            <td>{{send_variables['all_languages']}}</td>
+
+            <td>{{country['flag']}}</td>
+            <td>{{send_variables['capital']}}</td>
+            <td>{{send_variables['currency_name']}} ({{send_variables['currency_symbol']}})</td>
+
+            <td>{{country['continents'][0]}}</td>
+            <td>{{country['region']}}</td>
+            <td>{{country['subregion']}}</td>
+
+            <td>{{send_variables['population']}}</td>
+        </tr>
+    </table>
+
+</div>
+
+
+
+{% endblock %}
+{% include "footer.html" %}
+
+
+
+

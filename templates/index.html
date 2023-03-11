@@ -1,0 +1,38 @@
+{% include "header.html" %}
+{% block content %}
+
+<div class="form-container">
+  <h1 class="title">Choose a country</h1>
+
+  <form class="entire-form" action="{{ url_for('homepage') }}" method="POST" enctype="multipart/form-data">
+    <input type="text" name="country_input" required>
+    <br>
+    <button id="submit-button" type="submit" name="button" class="btn btn-primary">Find Country</button>
+  </form>
+</div>
+
+
+
+<div class="flags-container">
+  <h1 class="flags-title">Alternatively, find out more about our featured countries</h1>
+
+  <div class="row">
+
+  {% for country_dict in countries_to_display: %}
+    {% for display_country_name, display_country_flag_image in country_dict.items(): %}
+
+      <div class="col-lg-4 text-center">
+        <a href="{{url_for('show_country', country_name=display_country_name)}}">
+          <img class="flags" src="{{display_country_flag_image}}" alt="{{display_country_name}}">
+        </a>
+      </div>
+
+    {% endfor %}
+  {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}
+{% include "footer.html" %}
+

@@ -29,7 +29,7 @@ def show_country(country_name):
         found_country = [element for element in countries_response if element['name']['common'] == titlecase(country_name)][0]
         country_data = {key: value for key, value in found_country.items() if key in relevant_keys}
 
-        # Jinja cannot process the function list() (among other errors that may occur) hence special functions were created to retrieve some parts of the data
+        # Jinja cannot process the function list() (among other errors that may occur), hence special functions were created to retrieve some parts of the data
         variables_processed_outside_jinja = {'native_name': get_native_name(country_data),
                                              'currency_name': get_currency_name(country_data),
                                              'currency_symbol': get_currency_symbol(country_data),
